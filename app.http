@@ -1,0 +1,51 @@
+GET http://localhost:3000/todos/
+###
+
+GET http://localhost:3000/todos/3/
+###
+
+GET http://localhost:3000/agenda/?date=2021-12-12
+###
+
+POST http://localhost:3000/todos/
+Content-Type: application/json 
+
+{
+ "id": 6,
+ "todo": "Finalize event theme",
+ "priority": "LOW",
+ "status": "TO DO",
+ "category": "HOME",
+ "dueDate": "2021-02-22"
+}
+###
+
+PUT http://localhost:3000/todos/2/
+Content-Type: application/json 
+
+//SCENARIO-1
+
+# { "status": "DONE" }
+
+//SCENARIO-2
+
+# { "priority": "HIGH" }
+
+//SCENARIO-3
+
+# {
+# "todo": "Clean the garden"
+# }
+
+//SCENARIO-4
+
+# { "category": "LEARNING" }
+
+//SCENARIO-5
+
+{ "dueDate": "2021-01-12" }
+
+###
+
+DELETE http://localhost:3000/todos/3/
+###
